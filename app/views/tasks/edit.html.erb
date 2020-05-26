@@ -1,11 +1,9 @@
 <h1>edit.html.erb</h1>
 
 <%= simple_form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.input :completed %>
   <%= f.check_box :completed %>
   <%= f.submit %>
 <% end %>
