@@ -1,0 +1,8 @@
+<h1><strong>MY TASKS</strong></h1>
+<ul class="list-group" >
+  <% @tasks.each do |task| %>
+    <li class="list-group-item"><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new task", tasks_new_path, class: "btn btn-primary" %>
