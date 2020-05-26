@@ -1,17 +1,15 @@
 <h2><%= @task.title %></h2>
 <% if @task.completed == true %>
-  <i class="far fa-check-square"></i>
+ <i class="far fa-check-square"></i>
   <%= @task.details %>
 <% else %>
-  <i class="far fa-square"></i>
+  to-do
   <%= @task.details %>
 <% end %>
 <br>
 <%= link_to "edit this task", edit_task_path(@task), class:"btn btn-primary" %>
 
-  <%= link_to "Delete #{@task.title}",
-            task_path(@task),
-            method: :delete,
-            data: { confirm: "Are you sure?" } do%>
+<%= link_to task_path(@task), method: :delete, data: { confirm: "Are you sure?" } do %>
 <i class="far fa-trash-alt"></i>
 <% end %>
+
